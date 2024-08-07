@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DongTa.Domain\DongTa.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BaseRepository">
+      <HintPath>..\..\ErpBhxhGiaLai\BaseRepository\bin\Release\net8.0\BaseRepository.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

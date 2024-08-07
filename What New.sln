@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{F2E48275-1A00-4CB9-8186-FC6FF336AA6C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{0F37C168-9AEF-46B2-B3F7-C887326214A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.Domain", "DongTa.Domain\DongTa.Domain.csproj", "{DAFE6DFA-6B3D-4C19-AD87-8DF288CEB6A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.DataAccess", "DongTa.DataAccess\DongTa.DataAccess.csproj", "{F3E9371B-69FC-464E-B151-C3744D664C4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.ApiServer", "DongTa.ApiServer\DongTa.ApiServer.csproj", "{EA7D584E-8034-4B5E-B088-06B92876A30D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DongTa.DataAccessMediatR", "DongTa.DataAccessMediatR\DongTa.DataAccessMediatR.csproj", "{CF2A9527-D6C2-41DF-9BDD-2946D139D9BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAFE6DFA-6B3D-4C19-AD87-8DF288CEB6A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFE6DFA-6B3D-4C19-AD87-8DF288CEB6A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFE6DFA-6B3D-4C19-AD87-8DF288CEB6A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFE6DFA-6B3D-4C19-AD87-8DF288CEB6A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E9371B-69FC-464E-B151-C3744D664C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E9371B-69FC-464E-B151-C3744D664C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E9371B-69FC-464E-B151-C3744D664C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E9371B-69FC-464E-B151-C3744D664C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7D584E-8034-4B5E-B088-06B92876A30D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7D584E-8034-4B5E-B088-06B92876A30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7D584E-8034-4B5E-B088-06B92876A30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7D584E-8034-4B5E-B088-06B92876A30D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF2A9527-D6C2-41DF-9BDD-2946D139D9BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2A9527-D6C2-41DF-9BDD-2946D139D9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2A9527-D6C2-41DF-9BDD-2946D139D9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2A9527-D6C2-41DF-9BDD-2946D139D9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAFE6DFA-6B3D-4C19-AD87-8DF288CEB6A4} = {F2E48275-1A00-4CB9-8186-FC6FF336AA6C}
+		{F3E9371B-69FC-464E-B151-C3744D664C4C} = {F2E48275-1A00-4CB9-8186-FC6FF336AA6C}
+		{EA7D584E-8034-4B5E-B088-06B92876A30D} = {0F37C168-9AEF-46B2-B3F7-C887326214A5}
+		{CF2A9527-D6C2-41DF-9BDD-2946D139D9BB} = {F2E48275-1A00-4CB9-8186-FC6FF336AA6C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10D44165-F086-4F8A-9295-B2B38093592B}
+	EndGlobalSection
+EndGlobal

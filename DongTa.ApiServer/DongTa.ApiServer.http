@@ -1,0 +1,6 @@
+@DongTa.ApiServer_HostAddress = http://localhost:5247
+
+GET {{DongTa.ApiServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
