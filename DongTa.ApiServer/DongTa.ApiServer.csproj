@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DongTa.DataAccessMediatR\DongTa.DataAccessMediatR.csproj" />
+    <ProjectReference Include="..\DongTa.Result\DongTa.Result.csproj" />
   </ItemGroup>
 
   <ItemGroup>

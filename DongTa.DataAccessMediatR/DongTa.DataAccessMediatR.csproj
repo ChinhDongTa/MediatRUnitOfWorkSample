@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DongTa.DataAccessDapper\DongTa.DataAccessDapper.csproj" />
     <ProjectReference Include="..\DongTa.DataAccess\DongTa.DataAccess.csproj" />
   </ItemGroup>
 

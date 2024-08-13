@@ -11,6 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DongTa.Message\DongTa.Message.csproj" />
+    <ProjectReference Include="..\DongTa.Result\DongTa.Result.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="BaseRepository">
       <HintPath>..\..\ErpBhxhGiaLai\BaseRepository\bin\Release\net8.0\BaseRepository.dll</HintPath>
     </Reference>

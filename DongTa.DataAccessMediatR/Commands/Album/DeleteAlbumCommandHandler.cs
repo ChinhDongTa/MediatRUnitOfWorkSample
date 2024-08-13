@@ -2,11 +2,10 @@
 using DongTa.Domain.Interfaces;
 using MediatR;
 
-namespace DongTa.DataAccessMediatR.Commands.Album {
+namespace DongTa.DataAccessMediatR.Commands.Album;
 
-    public class DeleteAlbumCommandHandler(IChinookUow unitOfWork) : IRequestHandler<DeleteAlbumCommand, bool> {
+public class DeleteAlbumCommandHandler(IChinookUow unitOfWork) : IRequestHandler<DeleteAlbumCommand, bool> {
 
-        public async Task<bool> Handle(DeleteAlbumCommand request, CancellationToken cancellationToken)
-            => await unitOfWork.DeleteAlbum(request.AlbumId);
-    }
+    public async Task<bool> Handle(DeleteAlbumCommand request, CancellationToken cancellationToken)
+        => await unitOfWork.DeleteAlbum(request.AlbumId);
 }

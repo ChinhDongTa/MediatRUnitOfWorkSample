@@ -4,6 +4,7 @@ using ErpBhxhGialai.ConfigurationService.Classes;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using DongTa.DataAccessMediatR;
+using DongTa.DataAccessDapper;
 
 namespace DongTa.ApiServer.Helpers;
 
@@ -28,5 +29,6 @@ public static class ConfigService {
         builder.Services.RegisterMediatR();
 
         builder.Services.AddScoped<IChinookUow, ChinookUow>();
+        builder.Services.AddScoped<IDongTaDapper, DongTaDapper>();
     }
 }

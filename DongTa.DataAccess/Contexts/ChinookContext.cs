@@ -152,7 +152,6 @@ public partial class ChinookContext : DbContext
         modelBuilder.Entity<MediaType>(entity =>
         {
             entity.ToTable("MediaType");
-
             entity.Property(e => e.Name).HasMaxLength(120);
         });
 

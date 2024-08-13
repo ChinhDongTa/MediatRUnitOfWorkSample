@@ -2,6 +2,7 @@
 using DongTa.Domain.Dtos;
 using DongTa.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using DongTa.Result;
 
 namespace DongTa.ApiServer.Controllers;
 
@@ -10,14 +11,14 @@ namespace DongTa.ApiServer.Controllers;
 public class ArtistUowController(IChinookUow uow) : ControllerBase {
 
     [HttpGet("GetOne/{id}")]
-    public async Task<IActionResult> GetOne(int id) => Ok(await uow.GetArtistDtoById(id));
+    public async Task<IActionResult> GetOne(int id) => Ok(ApiResultExtension.GetApiResult(await uow.GetArtistDtoById(id)));
 
     [HttpGet("GetAll")]
-    public async Task<IActionResult> GetAllAlbum() => Ok(await uow.GetListArtistDto());
+    public async Task<IActionResult> GetAllAlbum() => Ok(ApiResultExtension.GetApiResult(await uow.GetListArtistDto()));
 
     [HttpDelete("Delete/{id}")]
-    public async Task<IActionResult> Delete(int id) => Ok(await uow.DeleteArtist(id));
+    public async Task<IActionResult> Delete(int id) => Ok(ApiResultExtension.GetApiResult(await uow.DeleteArtist(id)));
 
     [HttpPost("Edit")]
-    public async Task<IActionResult> Edit([FromBody] ArtistDto dto) => Ok(await uow.EditArtist(dto));
+    public async Task<IActionResult> Edit([FromBody] ArtistDto dto) => Ok(ApiResultExtension.GetApiResult(await uow.EditArtist(dto)));
 }

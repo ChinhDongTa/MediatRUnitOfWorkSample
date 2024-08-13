@@ -7,7 +7,5 @@ namespace DongTa.DataAccessMediatR.Queries.Album;
 
 public record AlbumQueryHandler(IChinookUow Uow) : IRequestHandler<AlbumQuery, AlbumDto?> {
     public async Task<AlbumDto?> Handle(AlbumQuery request, CancellationToken cancellationToken)
-    {
-        return await Uow.GetAlbumDtoById(request.Id);
-    }
+        => await Uow.GetAlbumDtoById(request.Id);
 }

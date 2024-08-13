@@ -2,13 +2,12 @@
 using DongTa.Domain.Interfaces;
 using MediatR;
 
-namespace DongTa.DataAccessMediatR.Commands.Album {
+namespace DongTa.DataAccessMediatR.Commands.Album;
 
-    public class EditAlbumCommandHandler(IChinookUow unitOfWork) : IRequestHandler<EditAlbumCommand, bool> {
+public class EditAlbumCommandHandler(IChinookUow unitOfWork) : IRequestHandler<EditAlbumCommand, bool> {
 
-        public async Task<bool> Handle(EditAlbumCommand request, CancellationToken cancellationToken)
-        {
-            return await unitOfWork.EditAlbum(request.Dto);
-        }
+    public async Task<bool> Handle(EditAlbumCommand request, CancellationToken cancellationToken)
+    {
+        return await unitOfWork.EditAlbum(request.Dto);
     }
 }

@@ -1,6 +1,86 @@
 @DongTa.ApiServer_HostAddress = http://localhost:5247
 
-GET {{DongTa.ApiServer_HostAddress}}/weatherforecast/
-Accept: application/json
+
+DELETE {{DongTa.ApiServer_HostAddress}}/api/albummediatr/Delete/0
+
+###
+
+POST {{DongTa.ApiServer_HostAddress}}/api/albummediatr/Edit
+Content-Type: application/json
+
+{
+  //AlbumDto
+}
+
+###
+
+GET {{DongTa.ApiServer_HostAddress}}/api/albummediatr/GetAll
+
+###
+
+GET {{DongTa.ApiServer_HostAddress}}/api/albummediatr/GetOne/0
+
+###
+
+DELETE {{DongTa.ApiServer_HostAddress}}/api/albumuow/Delete/0
+
+###
+
+POST {{DongTa.ApiServer_HostAddress}}/api/albumuow/Edit
+Content-Type: application/json
+
+{
+  //AlbumDto
+}
+
+###
+
+GET {{DongTa.ApiServer_HostAddress}}/api/albumuow/GetAll
+
+###
+
+GET {{DongTa.ApiServer_HostAddress}}/api/albumuow/GetOne/0
+
+###
+
+DELETE {{DongTa.ApiServer_HostAddress}}/api/artistmediatr/Delete/0
+
+###
+
+POST {{DongTa.ApiServer_HostAddress}}/api/artistmediatr/Edit
+Content-Type: application/json
+
+{
+  //ArtistDto
+}
+
+###
+
+GET {{DongTa.ApiServer_HostAddress}}/api/artistmediatr/GetAll
+
+###
+
+GET {{DongTa.ApiServer_HostAddress}}/api/artistmediatr/GetOne/0
+
+###
+
+DELETE {{DongTa.ApiServer_HostAddress}}/api/artistuow/Delete/0
+
+###
+
+POST {{DongTa.ApiServer_HostAddress}}/api/artistuow/Edit
+Content-Type: application/json
+
+{
+  //ArtistDto
+}
+
+###
+
+GET {{DongTa.ApiServer_HostAddress}}/api/artistuow/GetAll
+
+###
+
+GET {{DongTa.ApiServer_HostAddress}}/api/artistuow/GetOne/0
 
 ###

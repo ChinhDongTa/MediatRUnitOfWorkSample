@@ -5,7 +5,8 @@ using MediatR;
 
 namespace DongTa.DataAccessMediatR.Queries.Album;
 
-public record ListAlbumQueryHandler(IChinookUow Uow) : IRequestHandler<ListAlbumQuery, IEnumerable<AlbumDto>> {
+public class ListAlbumQueryHandler(IChinookUow Uow) : IRequestHandler<ListAlbumQuery, IEnumerable<AlbumDto>> {
+
     public async Task<IEnumerable<AlbumDto>> Handle(ListAlbumQuery request, CancellationToken cancellationToken)
     {
         return await Uow.GetListAlbumDto();

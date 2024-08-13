@@ -1,5 +1,9 @@
 ﻿using DongTa.Domain.Dtos;
 using DongTa.Domain.Models;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using System.Diagnostics.Metrics;
+using System.Net;
+using System.Numerics;
 
 namespace DongTa.Domain.Mapping;
 
@@ -32,24 +36,43 @@ public static class CustomerMapper {
     };
 
     /// <summary>
-    /// Chuyển CustomerDto sang Customer
+    /// Tạo mới hoặc copy giá trị dto tới entity
     /// </summary>
     /// <param name="customerDto"></param>
     /// <returns></returns>
-    public static Customer ToEntiTy(this CustomerDto customerDto) => new()
+    public static Customer ToEntiTy(this CustomerDto customerDto, Customer? customer = null)
     {
-        CustomerId = customerDto.CustomerId,
-        Email = customerDto.Email,
-        FirstName = customerDto.FirstName,
-        LastName = customerDto.LastName,
-        Address = customerDto.Address,
-        City = customerDto.City,
-        Company = customerDto.Company,
-        Country = customerDto.Country,
-        Fax = customerDto.Fax,
-        Phone = customerDto.Phone,
-        PostalCode = customerDto.PostalCode,
-        State = customerDto.State,
-        SupportRepId = customerDto.SupportRepId
-    };
+        if (customer is not null)
+        {
+            customer.Email = customerDto.Email;
+            customer.FirstName = customerDto.FirstName;
+            customer.LastName = customerDto.LastName;
+            customer.Address = customerDto.Address;
+            customer.City = customerDto.City;
+            customer.Company = customerDto.Company;
+            customer.Country = customerDto.Country;
+            customer.Fax = customerDto.Fax;
+            customer.Phone = customerDto.Phone;
+            customer.PostalCode = customerDto.PostalCode;
+            customer.State = customerDto.State;
+            customer.SupportRepId = customerDto.SupportRepId;
+            return customer;
+        }
+        return new()
+        {
+            CustomerId = customerDto.CustomerId,
+            Email = customerDto.Email,
+            FirstName = customerDto.FirstName,
+            LastName = customerDto.LastName,
+            Address = customerDto.Address,
+            City = customerDto.City,
+            Company = customerDto.Company,
+            Country = customerDto.Country,
+            Fax = customerDto.Fax,
+            Phone = customerDto.Phone,
+            PostalCode = customerDto.PostalCode,
+            State = customerDto.State,
+            SupportRepId = customerDto.SupportRepId
+        };
+    }
 }
