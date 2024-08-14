@@ -8,10 +8,7 @@ namespace DongTa.DataAccess.Extensions;
 public static class MediaTypeUowExtension {
 
     public static async Task<MediaTypeDto?> GetMediaTypeDtoById(this IChinookUow uow, int mediaTypeId)
-    {
-        var media = await uow.MediaTypeRepository.FindByIdAsync(mediaTypeId);
-        return media?.ToDto();
-    }
+    => (await uow.MediaTypeRepository.FindByIdAsync(mediaTypeId))?.ToDto();
 
     public static async Task<IEnumerable<MediaTypeDto>> GetListMediaTypeDto(this IChinookUow uow)
         => await uow.MediaTypeRepository.GetListBy(x => x.MediaTypeId > 0)

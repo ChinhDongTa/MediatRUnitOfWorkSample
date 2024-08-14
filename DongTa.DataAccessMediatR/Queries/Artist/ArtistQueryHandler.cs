@@ -8,7 +8,5 @@ namespace DongTa.DataAccessMediatR.Queries.Artist;
 public class ArtistQueryHandler(IChinookUow unitOfWork) : IRequestHandler<ArtistQuery, ArtistDto?> {
 
     public async Task<ArtistDto?> Handle(ArtistQuery request, CancellationToken cancellationToken)
-    {
-        return await unitOfWork.GetArtistDtoById(request.Id);
-    }
+        => await unitOfWork.GetArtistDtoById(request.Id);
 }

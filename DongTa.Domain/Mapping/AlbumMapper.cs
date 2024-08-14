@@ -5,7 +5,8 @@ namespace DongTa.Domain.Mapping;
 
 public static class AlbumMapper {
 
-    public static AlbumDto ToDto(this Album album) => new(album.AlbumId, album.Title, album.ArtistId, album.Artist.Name ?? "");
+    public static AlbumDto ToDto(this Album album)
+        => new(album.AlbumId, album.Title, album.ArtistId, album.Artist.Name ?? "");
 
     /// <summary>
     /// Tạo mới hoặc copy giá trị dto tới entity

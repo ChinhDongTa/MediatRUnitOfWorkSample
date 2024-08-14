@@ -6,19 +6,23 @@ using DongTa.Result;
 
 namespace DongTa.ApiServer.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class MediaTypeUowController(IChinookUow uow) : ControllerBase {
 
     [HttpGet("GetOne/{id}")]
-    public async Task<IActionResult> GetOne(int id) => Ok(ApiResultExtension.GetApiResult(await uow.GetMediaTypeDtoById(id)));
+    public async Task<IActionResult> GetOne(int id)
+        => Ok(ApiResultExtension.GetApiResult(await uow.GetMediaTypeDtoById(id)));
 
     [HttpGet("GetAll")]
-    public async Task<IActionResult> GetAllAlbum() => Ok(ApiResultExtension.GetApiResult(await uow.GetListMediaTypeDto()));
+    public async Task<IActionResult> GetAllAlbum()
+        => Ok(ApiResultExtension.GetApiResult(await uow.GetListMediaTypeDto()));
 
     [HttpDelete("Delete/{id}")]
-    public async Task<IActionResult> Delete(int id) => Ok(ApiResultExtension.GetApiResult(await uow.DeleteMediaType(id)));
+    public async Task<IActionResult> Delete(int id)
+        => Ok(ApiResultExtension.GetApiResult(await uow.DeleteMediaType(id)));
 
     [HttpPost("Edit")]
-    public async Task<IActionResult> Edit([FromBody] MediaTypeDto dto) => Ok(ApiResultExtension.GetApiResult(await uow.EditMediaType(dto)));
+    public async Task<IActionResult> Edit([FromBody] MediaTypeDto dto)
+        => Ok(ApiResultExtension.GetApiResult(await uow.EditMediaType(dto)));
 }

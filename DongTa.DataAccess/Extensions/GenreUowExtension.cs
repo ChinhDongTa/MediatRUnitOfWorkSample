@@ -8,10 +8,7 @@ namespace DongTa.DataAccess.Extensions;
 public static class GenreUowExtension {
 
     public static async Task<GenreDto?> GetGenreDtoById(this IChinookUow uow, int genreId)
-    {
-        var genre = await uow.GenreRepository.FindByIdAsync(genreId);
-        return genre?.ToDto();
-    }
+        => (await uow.GenreRepository.FindByIdAsync(genreId))?.ToDto();
 
     public static async Task<IEnumerable<GenreDto>> GetListGenreDto(this IChinookUow uow)
         => await uow.GenreRepository.GetListBy(x => x.GenreId > 0).Select(x => x.ToDto()).ToListAsync();

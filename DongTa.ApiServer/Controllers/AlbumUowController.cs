@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DongTa.ApiServer.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class AlbumUowController(IChinookUow uow) : ControllerBase {
 
@@ -20,9 +20,7 @@ public class AlbumUowController(IChinookUow uow) : ControllerBase {
 
     [HttpDelete("Delete/{id}")]
     public async Task<IActionResult> Delete(int id)
-    {
-        return Ok(ApiResultExtension.GetApiResult(await uow.DeleteAlbum(id)));
-    }
+        => Ok(ApiResultExtension.GetApiResult(await uow.DeleteAlbum(id)));
 
     [HttpPost("Edit")]
     public async Task<IActionResult> Edit([FromBody] AlbumDto dto)

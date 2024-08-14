@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DongTa.ApiServer.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class MediaTypeMediatRController(IMediator mediator) : ControllerBase {
 

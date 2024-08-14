@@ -8,10 +8,7 @@ namespace DongTa.DataAccess.Extensions;
 public static class PlaylistUowExtension {
 
     public static async Task<PlaylistDto?> GetPlaylistDtoById(this IChinookUow uow, int playlistId)
-    {
-        var pl = await uow.PlaylistRepository.FindByIdAsync(playlistId);
-        return pl?.ToDto();
-    }
+        => (await uow.PlaylistRepository.FindByIdAsync(playlistId))?.ToDto();
 
     public static async Task<IEnumerable<PlaylistDto>> GetListPlaylistDto(this IChinookUow uow)
         => await uow.PlaylistRepository.GetListBy(x => x.PlaylistId > 0)

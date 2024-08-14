@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DongTa.Message\DongTa.Message.csproj" />
     <ProjectReference Include="..\DongTa.Result\DongTa.Result.csproj" />
   </ItemGroup>

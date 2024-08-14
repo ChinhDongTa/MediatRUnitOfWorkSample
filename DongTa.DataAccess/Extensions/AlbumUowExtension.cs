@@ -8,12 +8,9 @@ namespace DongTa.DataAccess.Extensions;
 public static class AlbumUowExtension {
 
     public static async Task<AlbumDto?> GetAlbumDtoById(this IChinookUow uow, int albumId)
-    {
-        var album = await uow.AlbumRepository.GetListBy(x => x.AlbumId == albumId)
+        => (await uow.AlbumRepository.GetListBy(x => x.AlbumId == albumId)
             .Include(x => x.Artist)
-            .FirstOrDefaultAsync();
-        return album?.ToDto();
-    }
+            .FirstOrDefaultAsync())?.ToDto();
 
     public static async Task<IEnumerable<AlbumDto>> GetListAlbumDto(this IChinookUow uow)
         => await uow.AlbumRepository.GetListBy(x => x.AlbumId > 0)

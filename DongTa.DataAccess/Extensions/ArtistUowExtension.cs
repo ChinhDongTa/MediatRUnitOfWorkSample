@@ -8,10 +8,7 @@ namespace DongTa.DataAccess.Extensions;
 public static class ArtistUowExtension {
 
     public static async Task<ArtistDto?> GetArtistDtoById(this IChinookUow uow, int artistId)
-    {
-        var artist = await uow.ArtistRepository.GetOneAsync(x => x.ArtistId == artistId);
-        return artist?.ToDto();
-    }
+        => (await uow.ArtistRepository.GetOneAsync(x => x.ArtistId == artistId))?.ToDto();
 
     public static async Task<IEnumerable<ArtistDto>> GetListArtistDto(this IChinookUow uow)
         => await uow.ArtistRepository.GetListBy(x => x.ArtistId > 0)
@@ -32,7 +29,7 @@ public static class ArtistUowExtension {
     {
         if (dto.ArtistId == 0)
         {
-            await uow.ArtistRepository.InsertAsync(new Domain.Models.Artist { Name = dto.Name });
+            await uow.ArtistRepository.InsertAsync(dto.ToEntity());
             return await uow.SaveAllAsync();
         }
         else

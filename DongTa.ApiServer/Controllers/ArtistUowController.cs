@@ -6,19 +6,23 @@ using DongTa.Result;
 
 namespace DongTa.ApiServer.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class ArtistUowController(IChinookUow uow) : ControllerBase {
 
     [HttpGet("GetOne/{id}")]
-    public async Task<IActionResult> GetOne(int id) => Ok(ApiResultExtension.GetApiResult(await uow.GetArtistDtoById(id)));
+    public async Task<IActionResult> GetOne(int id)
+        => Ok(ApiResultExtension.GetApiResult(await uow.GetArtistDtoById(id)));
 
     [HttpGet("GetAll")]
-    public async Task<IActionResult> GetAllAlbum() => Ok(ApiResultExtension.GetApiResult(await uow.GetListArtistDto()));
+    public async Task<IActionResult> GetAllAlbum()
+        => Ok(ApiResultExtension.GetApiResult(await uow.GetListArtistDto()));
 
     [HttpDelete("Delete/{id}")]
-    public async Task<IActionResult> Delete(int id) => Ok(ApiResultExtension.GetApiResult(await uow.DeleteArtist(id)));
+    public async Task<IActionResult> Delete(int id)
+        => Ok(ApiResultExtension.GetApiResult(await uow.DeleteArtist(id)));
 
     [HttpPost("Edit")]
-    public async Task<IActionResult> Edit([FromBody] ArtistDto dto) => Ok(ApiResultExtension.GetApiResult(await uow.EditArtist(dto)));
+    public async Task<IActionResult> Edit([FromBody] ArtistDto dto)
+        => Ok(ApiResultExtension.GetApiResult(await uow.EditArtist(dto)));
 }
