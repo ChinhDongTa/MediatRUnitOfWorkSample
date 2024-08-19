@@ -21,11 +21,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.Message", "DongTa.Me
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.DataAccessDapper", "DongTa.DataAccessDapper\DongTa.DataAccessDapper.csproj", "{B2338FF7-DA34-48F1-BCAE-8AE3CBE8238E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DongTa.ApiEndPoint", "DongTa.ApiEndPoint\DongTa.ApiEndPoint.csproj", "{957CF6BB-8006-443E-B5E5-860B7A1B7EEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.ApiEndPoint", "DongTa.ApiEndPoint\DongTa.ApiEndPoint.csproj", "{957CF6BB-8006-443E-B5E5-860B7A1B7EEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DongTa.ConsoleUI", "DongTa.ConsoleUI\DongTa.ConsoleUI.csproj", "{4215E6DD-9438-4FA0-A64A-6591239FED1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.ConsoleUI", "DongTa.ConsoleUI\DongTa.ConsoleUI.csproj", "{4215E6DD-9438-4FA0-A64A-6591239FED1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DongTa.DesktopUI", "DongTa.DesktopUI\DongTa.DesktopUI.csproj", "{70513E2A-6F99-4F1F-8E27-5C7801552C50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.DesktopUI", "DongTa.DesktopUI\DongTa.DesktopUI.csproj", "{70513E2A-6F99-4F1F-8E27-5C7801552C50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.AspireFirst.AppHost", "DongTa.AspireFirst\DongTa.AspireFirst.AppHost\DongTa.AspireFirst.AppHost.csproj", "{8CB97DE6-9D2D-481D-A011-DEE3A3285198}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.AspireFirst.ServiceDefaults", "DongTa.AspireFirst\DongTa.AspireFirst.ServiceDefaults\DongTa.AspireFirst.ServiceDefaults.csproj", "{02DD3260-57D9-44CB-B3FE-64FA3763730B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.AspireFirst.ApiService", "DongTa.AspireFirst\DongTa.AspireFirst.ApiService\DongTa.AspireFirst.ApiService.csproj", "{6FA67683-134D-4FB8-AFCC-9C473E190A9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongTa.AspireFirst.Web", "DongTa.AspireFirst\DongTa.AspireFirst.Web\DongTa.AspireFirst.Web.csproj", "{F9DF0D34-71A2-4C02-8B74-75F47388FB55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +81,22 @@ Global
 		{70513E2A-6F99-4F1F-8E27-5C7801552C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70513E2A-6F99-4F1F-8E27-5C7801552C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70513E2A-6F99-4F1F-8E27-5C7801552C50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB97DE6-9D2D-481D-A011-DEE3A3285198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB97DE6-9D2D-481D-A011-DEE3A3285198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB97DE6-9D2D-481D-A011-DEE3A3285198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB97DE6-9D2D-481D-A011-DEE3A3285198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02DD3260-57D9-44CB-B3FE-64FA3763730B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02DD3260-57D9-44CB-B3FE-64FA3763730B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02DD3260-57D9-44CB-B3FE-64FA3763730B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02DD3260-57D9-44CB-B3FE-64FA3763730B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA67683-134D-4FB8-AFCC-9C473E190A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA67683-134D-4FB8-AFCC-9C473E190A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA67683-134D-4FB8-AFCC-9C473E190A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA67683-134D-4FB8-AFCC-9C473E190A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9DF0D34-71A2-4C02-8B74-75F47388FB55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9DF0D34-71A2-4C02-8B74-75F47388FB55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9DF0D34-71A2-4C02-8B74-75F47388FB55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9DF0D34-71A2-4C02-8B74-75F47388FB55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +112,10 @@ Global
 		{957CF6BB-8006-443E-B5E5-860B7A1B7EEE} = {F2E48275-1A00-4CB9-8186-FC6FF336AA6C}
 		{4215E6DD-9438-4FA0-A64A-6591239FED1D} = {0F37C168-9AEF-46B2-B3F7-C887326214A5}
 		{70513E2A-6F99-4F1F-8E27-5C7801552C50} = {0F37C168-9AEF-46B2-B3F7-C887326214A5}
+		{8CB97DE6-9D2D-481D-A011-DEE3A3285198} = {0F37C168-9AEF-46B2-B3F7-C887326214A5}
+		{02DD3260-57D9-44CB-B3FE-64FA3763730B} = {0F37C168-9AEF-46B2-B3F7-C887326214A5}
+		{6FA67683-134D-4FB8-AFCC-9C473E190A9E} = {0F37C168-9AEF-46B2-B3F7-C887326214A5}
+		{F9DF0D34-71A2-4C02-8B74-75F47388FB55} = {0F37C168-9AEF-46B2-B3F7-C887326214A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {10D44165-F086-4F8A-9295-B2B38093592B}

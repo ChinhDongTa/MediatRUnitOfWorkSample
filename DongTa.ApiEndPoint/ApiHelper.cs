@@ -8,7 +8,7 @@ public static class ApiHelper {
 
     public static readonly HttpClient Client = new()
     {
-        BaseAddress = new Uri(" http://localhost:5247")
+        BaseAddress = new Uri("https://localhost:7496/") //Uri(" http://localhost:5247")
     };
 
     /// <summary>

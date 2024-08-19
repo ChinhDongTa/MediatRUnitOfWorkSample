@@ -3,10 +3,10 @@
 public static class CRUDBase {
 
     public static string GetOne(string controllerName, int entityId)
-        => $"{controllerName}/GetOne/{entityId}";
+        => $"{controllerName}/One/{entityId}";
 
     public static string GetAll(string controllerName)
-       => $"{controllerName}/GetAll";
+       => $"{controllerName}/All";
 
     public static string Delete(string controllerName, int entityId)
        => $"{controllerName}/Delete/{entityId}";

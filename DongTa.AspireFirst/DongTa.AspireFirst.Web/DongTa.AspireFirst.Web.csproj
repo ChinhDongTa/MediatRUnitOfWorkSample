@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DongTa.ApiEndPoint\DongTa.ApiEndPoint.csproj" />
+    <ProjectReference Include="..\..\DongTa.Domain\DongTa.Domain.csproj" />
+    <ProjectReference Include="..\DongTa.AspireFirst.ServiceDefaults\DongTa.AspireFirst.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+</Project>

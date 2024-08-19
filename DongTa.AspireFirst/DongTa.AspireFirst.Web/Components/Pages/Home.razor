@@ -1,0 +1,38 @@
+﻿@page "/"
+
+
+<PageTitle>Home</PageTitle>
+
+@if (albums == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Artist</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var albumDto in albums)
+            {
+                <tr>
+                    <td>@albumDto.Title</td>
+                    <td>@albumDto.ArtistName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code{
+    private IEnumerable<AlbumDto>? albums;
+
+    protected override async Task OnInitializedAsync()
+    {
+        albums = (await ApiEndPoint.ApiHelper.GetApiResultDtoAsync<ApiResultDto<AlbumDto>>(CRUDBase.GetAll(ControllerName.AlbumUow)))?.Dtos;
+    }
+}

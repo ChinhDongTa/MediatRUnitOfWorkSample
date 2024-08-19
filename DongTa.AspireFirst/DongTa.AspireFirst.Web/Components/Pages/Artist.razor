@@ -1,0 +1,35 @@
+﻿@page "/Artist"
+<h3>Artist</h3>
+@if (artistDtos == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var albumDto in artistDtos)
+            {
+                <tr>
+                    <td>@albumDto.ArtistId</td>
+                    <td>@albumDto.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<ArtistDto>? artistDtos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        artistDtos = (await ApiEndPoint.ApiHelper.GetApiResultDtoAsync<ApiResultDto<ArtistDto>>(CRUDBase.GetAll(ControllerName.ArtistUow)))?.Dtos;
+    }
+}
